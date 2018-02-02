@@ -1,0 +1,10 @@
+rocketmq
+  producer
+    groupName: devGroup
+    namesrvAddr : 127.0.0.1:9876
+    instanceName : devProducer
+    topic : rocketTopic
+    tag : sms
+    key : ezgo-etbtrain
+    maxMessageSize : 131072
+    sendMsgTimeout : 10000
