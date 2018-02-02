@@ -1,10 +1,14 @@
-rocketmq
-  producer
+
+rocketmq:
+  producer:
     groupName: devGroup
-    namesrvAddr : 127.0.0.1:9876
+    namesrvAddr : 192.168.0.232:9876
     instanceName : devProducer
     topic : rocketTopic
-    tag : sms
-    key : ezgo-etbtrain
+    tag : testMq
+    key : test-ezgo-etbtrain
     maxMessageSize : 131072
     sendMsgTimeout : 10000
+server:
+  address: 127.0.0.1
+  port:  8080

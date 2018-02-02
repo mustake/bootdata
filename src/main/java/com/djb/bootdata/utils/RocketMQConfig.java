@@ -15,7 +15,7 @@ import java.util.Map;
 
 @Configuration
 public class RocketMQConfig {
-    public static final Logger LOGGER = LoggerFactory.getLogger(RocketMQConfig.class);
+
     @Value("${rocketmq.producer.groupName}")
     private String groupName;
 
@@ -39,9 +39,9 @@ public class RocketMQConfig {
         producer.setSendMsgTimeout(this.sendMsgTimeout);
         try {
             producer.start();
-            LOGGER.info(String.format("producer is start ! groupName:[%s],namesrvAddr:[%s]", this.groupName, this.namesrvAddr));
+            System.out.println((String.format("producer is start ! groupName:[%s],namesrvAddr:[%s]", this.groupName, this.namesrvAddr)));
         } catch (MQClientException e) {
-            LOGGER.error(String.format("producer is error {}", e.getMessage(), e));
+            System.out.println((String.format("producer is error {}", e.getMessage(), e)));
         }
         return producer;
     }
